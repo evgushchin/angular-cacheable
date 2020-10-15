@@ -1,6 +1,13 @@
 {
   "name": "angular-cacheable",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/evgushchin/angular-cacheable"
+  },
+  "bugs": {
+    "url": "https://github.com/evgushchin/angular-cacheable/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +16,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~9.1.6",
     "@angular/common": "~9.1.6",
