@@ -2,5 +2,46 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "angular-cacheable": {
+      "projectType": "library",
+      "root": "projects/angular-cacheable",
+      "sourceRoot": "projects/angular-cacheable/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-cacheable/tsconfig.lib.json",
+            "project": "projects/angular-cacheable/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-cacheable/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-cacheable/src/test.ts",
+            "tsConfig": "projects/angular-cacheable/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-cacheable/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-cacheable/tsconfig.lib.json",
+              "projects/angular-cacheable/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "angular-cacheable"
 }
