@@ -1,24 +1,50 @@
 # AngularCacheable
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
+An angular library for cacheing your method responses using decorators
+Compatible with Angular 9+
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project angular-cacheable` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-cacheable`.
-> Note: Don't forget to add `--project angular-cacheable` or else it will be added to the default project in your `angular.json` file. 
+Install it with npm
 
-## Build
+```bash
+npm install angular-cacheable --save
+```
 
-Run `ng build angular-cacheable` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Usage example
 
-## Publishing
+1. Import `AngularCacheableModule` in the root module
 
-After building your library with `ng build angular-cacheable`, go to the dist folder `cd dist/angular-cacheable` and run `npm publish`.
+```ts
+  /// ...
+  import { AngularCacheableModule } from 'angular-cacheable';
 
-## Running unit tests
+  @NgModule({
+   imports: [
+      // ...
+      AngularCacheableModule
+   ]
+  })
+```
 
-Run `ng test angular-cacheable` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Add a `Cacheable` decorator to your method that returns an `Observable`.
 
-## Further help
+```ts
+  /** Return listed items */
+  @Cacheable({ key: 'categories', ttl: 1000 })
+  public getCategories() {
+    return this.restService.get('my-url');
+  }
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Don't worry if your method has parameters, the plugin will handle it internally.
+
+## Decorator parameters
+
+| Function Name               | Description                                         |
+| --------------------------- | --------------------------------------------------- |
+| **key**                     | (required) A key for cache (must be unique)         |
+| **ttl**                     | TTL in milliseconds, default 24 hours               |
+
+## License
+MIT © [Evgeny Gushchin](https://github.com/evgushchin)
