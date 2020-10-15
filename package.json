@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "license": "MIT",
   "repository": {
+    "type": "git",
     "url": "https://github.com/evgushchin/angular-cacheable"
   },
   "bugs": {
     "url": "https://github.com/evgushchin/angular-cacheable/issues"
   },
+  "keywords": ["angular", "cache", "cache decorator"],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

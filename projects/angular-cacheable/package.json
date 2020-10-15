@@ -2,7 +2,9 @@
   "name": "angular-cacheable",
   "version": "0.0.1",
   "license": "MIT",
+  "keywords": ["angular", "cache", "cache decorator"],
   "repository": {
+    "type": "git",
     "url": "https://github.com/evgushchin/angular-cacheable"
   },
   "bugs": {
