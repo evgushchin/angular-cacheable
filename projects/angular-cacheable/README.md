@@ -13,23 +13,13 @@ npm install angular-cacheable --save
 
 ### Usage example
 
-1. Import `AngularCacheableModule` in the root module
+1. Add a `Cacheable` decorator to your method that returns an `Observable`.
 
 ```ts
-  /// ...
-  import { AngularCacheableModule } from 'angular-cacheable';
+  import { Cacheable } from 'angular-cacheable';
 
-  @NgModule({
-   imports: [
-      // ...
-      AngularCacheableModule
-   ]
-  })
-```
+  // ...
 
-2. Add a `Cacheable` decorator to your method that returns an `Observable`.
-
-```ts
   /** Return listed items */
   @Cacheable({ key: 'categories', ttl: 1000 })
   public getCategories() {
