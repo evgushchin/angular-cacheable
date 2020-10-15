@@ -1,13 +1,27 @@
 {
   "name": "angular-cacheable",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "license": "MIT",
-  "keywords": ["angular", "cache", "cache decorator"],
+  "author": "Evgeny Gushchin",
   "repository": {
     "type": "git",
     "url": "https://github.com/evgushchin/angular-cacheable"
   },
   "bugs": {
     "url": "https://github.com/evgushchin/angular-cacheable/issues"
-  }
+  },
+  "keywords": [
+    "angular",
+    "cache",
+    "cache decorator"
+  ],
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build angular-cacheable --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": false
 }
