@@ -9,7 +9,14 @@
   "bugs": {
     "url": "https://github.com/evgushchin/angular-cacheable/issues"
   },
-  "keywords": ["angular", "cache", "cache decorator"],
+  "keywords": [
+    "angular",
+    "cache",
+    "cache decorator"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
