@@ -21,7 +21,8 @@
     "build": "ng build angular-cacheable --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish": "npm publish ./dist/angular-cacheable"
   },
   "private": false,
   "dependencies": {
