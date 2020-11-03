@@ -56,6 +56,12 @@ Exmaple: `@Cacheable({ key: 'posts' })` => `@Cacheable()`
   }
 ```
 
+To invalidate cache call 
+```ts
+CacheableService.getInstance().invalidate( yourCacheKey );
+```
+
+
 ## Decorator parameters
 
 | Function Name               | Description                                         |

@@ -74,6 +74,19 @@ export class CacheableService {
   }
 
   /**
+   * Invalidates cache key
+   * @param key The cache key
+   */
+  public invalidate(key: string): void {
+    if (this.inFlightObservables.has(key)) {
+      this.inFlightObservables.get(key).complete();
+      this.inFlightObservables.delete(key);
+    }
+
+    this.cache.delete(key);
+  }
+
+  /**
    * Publishes the value to all observers of the given
    * in progress observables if observers exist.
    */
