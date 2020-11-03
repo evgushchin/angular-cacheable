@@ -11,8 +11,8 @@ export class CacheableService {
   /** Singleton implementaion: it's need to access from a decorator */
   private static instance: CacheableService = null;
 
-  /** Default TTL: 24 hours */
-  public readonly DEFAULT_TTL = 86400;
+  /** Default TTL: 1 hour */
+  public readonly DEFAULT_TTL = 3600000;
 
   /** Cache container */
   private cache = new Map<string, ICacheContent>();
