@@ -15,10 +15,10 @@ npm install angular-cacheable --save
 
 * Breaking changes in v0.1.0 *
 
-Remove all `key` paramters from `Cacheable`. 
-
+1. Remove all `key` paramters from `Cacheable`. 
 Exmaple: `@Cacheable({ key: 'posts' })` => `@Cacheable()`
 
+2. Default TTL is now 1 hour.
 
 ### Usage example
 
@@ -63,7 +63,7 @@ Exmaple: `@Cacheable({ key: 'posts' })` => `@Cacheable()`
 | **key**                     | A key for cache (must be unique) or a function that |
 |                             | returns a key. Defaults to method name concatenated |
 |                             | with hashed arguments.                              |
-| **ttl**                     | TTL in milliseconds, default 24 hours               |
+| **ttl**                     | TTL in milliseconds, default 1 hour                |
 
 ## License
 MIT © [Evgeny Gushchin](https://github.com/evgushchin)
