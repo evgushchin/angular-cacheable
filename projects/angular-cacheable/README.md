@@ -11,9 +11,9 @@ Install it with npm
 npm install angular-cacheable --save
 ```
 
-# Migration from v0.0.4 to v0.1.0
+# Migration from v0.0.4 to v0.1.1
 
-* Breaking changes in v0.1.0 *
+**Breaking changes in v0.1.1**
 
 1. Remove all `key` paramters from `Cacheable`. 
 Exmaple: `@Cacheable({ key: 'posts' })` => `@Cacheable()`
